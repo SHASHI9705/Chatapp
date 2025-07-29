@@ -6,7 +6,6 @@ interface User {
     socket: WebSocket;
     room: string;
 }
-
 let allSocket: User[] = [];
 wss.on("connection", (socket) => {
     socket.on("message", (message) => {
@@ -34,5 +33,4 @@ wss.on("connection", (socket) => {
             
         }
     })
-
 })
